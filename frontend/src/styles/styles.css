@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+.image-custom-margin {
+  margin-top: 90px; 
+  margin-left: 150px;
+  margin-right: auto;
+  margin-bottom: 20px;
+
+}
+
+.arrow-left-custom-margin {
+  left: 108px;
+  top: 240px;
+  transform: translateY(-50%);
+}
+
+.arrow-right-custom-margin {
+  right: -194px;
+  top: 240px;
+  transform: translateY(-50%);
+}
+
+.bg-custom-zinc {
+    background-color: #dcdcdc;
+}
+
+.text-style {
+  color: #242424; 
+  font-size: 1rem; 
+  font-family: "Poppins", sans-serif; 
+  font-weight: 500; 
+}
+
+.navbar-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh; /* Mantiene la altura completa del viewport */
+  z-index: 1000; /* Asegura que el navbar esté por encima de otros elementos */
+}
+.nav-item {
+  border-radius: 0.375rem; 
+  padding: 0.5rem; 
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: background-color 0.3s ease;
+  position: relative;
+}
+
+.nav-item:hover {
+  background-color: #739a439c; 
+}
+
+.dropdown-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out; /* Oculto por defecto */
+  position: absolute;
+  left: 0; 
+  top: 100%; 
+  z-index: 10;
+  background-color: #d3d3d3;
+  width: 100%;
+}
+
+.nav-item:hover .dropdown-content {
+  max-height: 500px; 
+  overflow: visible;
+  display: block;
+}
+
+.dropdown-content li {
+  padding: 0.5rem 1rem; 
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-content li:hover {
+  background-color: #9096899c; 
+}
+
+.custom-margin {
+  margin-left: auto;
+  margin-right: 250px;
+}
+
+.margin-top-custom {
+  margin-top: 100px;
+  margin-left: 430px;
+  margin-bottom: 300px;
+}
+
+.text-slate-300 {
+  color: #d1d5db;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.form-grid select,
+
+.form-grid textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-grid input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 808px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.custom-padding {
+  padding: 30px; 
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+.custom-title::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -10px;
+  height: 3px;
+  width: 590px;
+  background: linear-gradient(170deg, #739A43, #1abc9c);
+}
+

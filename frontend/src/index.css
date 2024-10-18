@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-image: url('./imagenes/fondo.jpg');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  color: #86B250;
+  margin: 0px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+.content-container {
+  height: calc(100vh - theme("spacing.1"));
+}

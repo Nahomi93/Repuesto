@@ -1,0 +1,108 @@
+"filename", "language", "JavaScript", "JSON", "Markdown", "XML", "JavaScript JSX", "CSS", "HTML", "comment", "blank", "total"
+"c:\Users\INTEL\Desktop\Infobest\Backend\package-lock.json", "JSON", 0, 3320, 0, 0, 0, 0, 0, 0, 1, 3321
+"c:\Users\INTEL\Desktop\Infobest\Backend\package.json", "JSON", 0, 30, 0, 0, 0, 0, 0, 0, 1, 31
+"c:\Users\INTEL\Desktop\Infobest\Backend\src\app.js", "JavaScript", 38, 0, 0, 0, 0, 0, 0, 1, 10, 49
+"c:\Users\INTEL\Desktop\Infobest\Backend\src\config.js", "JavaScript", 5, 0, 0, 0, 0, 0, 0, 0, 2, 7
+"c:\Users\INTEL\Desktop\Infobest\Backend\src\controllers\auth.controller.js", "JavaScript", 106, 0, 0, 0, 0, 0, 0, 6, 20, 132
+"c:\Users\INTEL\Desktop\Infobest\Backend\src\controllers\cliente.controller.js", "JavaScript", 46, 0, 0, 0, 0, 0, 0, 0, 7, 53
+"c:\Users\INTEL\Desktop\Infobest\Backend\src\controllers\garantia_dispositivo.controller.js", "JavaScript", 81, 0, 0, 0, 0, 0, 0, 0, 8, 89
+"c:\Users\INTEL\Desktop\Infobest\Backend\src\controllers\reparacion.controller.js", "JavaScript", 163, 0, 0, 0, 0, 0, 0, 2, 13, 178
+"c:\Users\INTEL\Desktop\Infobest\Backend\src\controllers\tasks.controller.js", "JavaScript", 80, 0, 0, 0, 0, 0, 0, 0, 11, 91
+"c:\Users\INTEL\Desktop\Infobest\Backend\src\controllers\tecnico.controller.js", "JavaScript", 47, 0, 0, 0, 0, 0, 0, 0, 7, 54
+"c:\Users\INTEL\Desktop\Infobest\Backend\src\db.js", "JavaScript", 10, 0, 0, 0, 0, 0, 0, 0, 1, 11
+"c:\Users\INTEL\Desktop\Infobest\Backend\src\index.js", "JavaScript", 5, 0, 0, 0, 0, 0, 0, 0, 1, 6
+"c:\Users\INTEL\Desktop\Infobest\Backend\src\libs\jwt.js", "JavaScript", 17, 0, 0, 0, 0, 0, 0, 0, 3, 20
+"c:\Users\INTEL\Desktop\Infobest\Backend\src\middlewares\validateToken.js", "JavaScript", 20, 0, 0, 0, 0, 0, 0, 1, 5, 26
+"c:\Users\INTEL\Desktop\Infobest\Backend\src\middlewares\validator.middleware.js", "JavaScript", 12, 0, 0, 0, 0, 0, 0, 0, 0, 12
+"c:\Users\INTEL\Desktop\Infobest\Backend\src\models\garantia_dispositivos.model.js", "JavaScript", 43, 0, 0, 0, 0, 0, 0, 0, 2, 45
+"c:\Users\INTEL\Desktop\Infobest\Backend\src\models\reparacion.model.js", "JavaScript", 51, 0, 0, 0, 0, 0, 0, 0, 2, 53
+"c:\Users\INTEL\Desktop\Infobest\Backend\src\models\task.model.js", "JavaScript", 35, 0, 0, 0, 0, 0, 0, 0, 3, 38
+"c:\Users\INTEL\Desktop\Infobest\Backend\src\models\user.model.js", "JavaScript", 29, 0, 0, 0, 0, 0, 0, 1, 3, 33
+"c:\Users\INTEL\Desktop\Infobest\Backend\src\routes\auth.routes.js", "JavaScript", 15, 0, 0, 0, 0, 0, 0, 2, 3, 20
+"c:\Users\INTEL\Desktop\Infobest\Backend\src\routes\cliente.routes.js", "JavaScript", 9, 0, 0, 0, 0, 0, 0, 0, 1, 10
+"c:\Users\INTEL\Desktop\Infobest\Backend\src\routes\garantia_dispositivo.routes.js", "JavaScript", 12, 0, 0, 0, 0, 0, 0, 0, 3, 15
+"c:\Users\INTEL\Desktop\Infobest\Backend\src\routes\reparacion.routes.js", "JavaScript", 15, 0, 0, 0, 0, 0, 0, 0, 3, 18
+"c:\Users\INTEL\Desktop\Infobest\Backend\src\routes\tasks.routes.js", "JavaScript", 13, 0, 0, 0, 0, 0, 0, 0, 4, 17
+"c:\Users\INTEL\Desktop\Infobest\Backend\src\routes\tecnico.routes.js", "JavaScript", 11, 0, 0, 0, 0, 0, 0, 0, 3, 14
+"c:\Users\INTEL\Desktop\Infobest\Backend\src\schemas\auth.shema.js", "JavaScript", 31, 0, 0, 0, 0, 0, 0, 0, 2, 33
+"c:\Users\INTEL\Desktop\Infobest\Backend\src\schemas\garantia_dispositivo.schema.js", "JavaScript", 22, 0, 0, 0, 0, 0, 0, 6, 2, 30
+"c:\Users\INTEL\Desktop\Infobest\Backend\src\schemas\reparacion.schema.js", "JavaScript", 28, 0, 0, 0, 0, 0, 0, 2, 2, 32
+"c:\Users\INTEL\Desktop\Infobest\Backend\src\schemas\task.shema.js", "JavaScript", 14, 0, 0, 0, 0, 0, 0, 0, 2, 16
+"c:\Users\INTEL\Desktop\Infobest\Backend\src\schemas\tecnico.schema.js", "JavaScript", 26, 0, 0, 0, 0, 0, 0, 0, 2, 28
+"c:\Users\INTEL\Desktop\Infobest\frontend\.eslintrc.cjs", "JavaScript", -21, 0, 0, 0, 0, 0, 0, 0, -1, -22
+"c:\Users\INTEL\Desktop\Infobest\frontend\README.md", "Markdown", 0, 0, -5, 0, 0, 0, 0, 0, -4, -9
+"c:\Users\INTEL\Desktop\Infobest\frontend\index.html", "HTML", 0, 0, 0, 0, 0, 0, -13, 0, -1, -14
+"c:\Users\INTEL\Desktop\Infobest\frontend\package-lock.json", "JSON", 0, -6320, 0, 0, 0, 0, 0, 0, -1, -6321
+"c:\Users\INTEL\Desktop\Infobest\frontend\package.json", "JSON", 0, -44, 0, 0, 0, 0, 0, 0, -1, -45
+"c:\Users\INTEL\Desktop\Infobest\frontend\postcss.config.js", "JavaScript", -6, 0, 0, 0, 0, 0, 0, 0, -1, -7
+"c:\Users\INTEL\Desktop\Infobest\frontend\public\vite.svg", "XML", 0, 0, 0, -1, 0, 0, 0, 0, 0, -1
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\App.css", "CSS", 0, 0, 0, 0, 0, -37, 0, 0, -7, -44
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\App.jsx", "JavaScript JSX", 0, 0, 0, 0, -79, 0, 0, -3, -21, -103
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\ProtectedRoute.jsx", "JavaScript JSX", 0, 0, 0, 0, -8, 0, 0, -2, -2, -12
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\api\auth.js", "JavaScript", -4, 0, 0, 0, 0, 0, 0, 0, -3, -7
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\api\axios.js", "JavaScript", -7, 0, 0, 0, 0, 0, 0, 0, -2, -9
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\api\camunda.js", "JavaScript", -8, 0, 0, 0, 0, 0, 0, -1, -3, -12
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\api\cliente.js", "JavaScript", -6, 0, 0, 0, 0, 0, 0, 0, -6, -12
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\api\garantia.js", "JavaScript", -6, 0, 0, 0, 0, 0, 0, 0, -6, -12
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\api\reparacion.js", "JavaScript", -8, 0, 0, 0, 0, 0, 0, 0, -9, -17
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\api\taskcamunda.js", "JavaScript", -41, 0, 0, 0, 0, 0, 0, 0, -6, -47
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\api\tasks.js", "JavaScript", -7, 0, 0, 0, 0, 0, 0, 0, -7, -14
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\api\tecnico.js", "JavaScript", -6, 0, 0, 0, 0, 0, 0, 0, -6, -12
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\assets\react.svg", "XML", 0, 0, 0, -1, 0, 0, 0, 0, 0, -1
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\components\Navbar.jsx", "JavaScript JSX", 0, 0, 0, 0, -239, 0, 0, 0, -13, -252
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\components\camunda\ProcessDiagram.jsx", "JavaScript JSX", 0, 0, 0, 0, -22, 0, 0, 0, -6, -28
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\components\camunda\StartProcessButton.jsx", "JavaScript JSX", 0, 0, 0, 0, -24, 0, 0, -1, -6, -31
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\components\clientes\ClienteCard.jsx", "JavaScript JSX", 0, 0, 0, 0, -29, 0, 0, 0, -3, -32
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\components\garantia\GarantiaCard.jsx", "JavaScript JSX", 0, 0, 0, 0, -34, 0, 0, 0, -3, -37
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\components\reparaciones\ReparacionCard.jsx", "JavaScript JSX", 0, 0, 0, 0, -72, 0, 0, 0, -5, -77
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\components\tasks\TaskCard.jsx", "JavaScript JSX", 0, 0, 0, 0, -66, 0, 0, 0, -6, -72
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\components\tecnicos\TecnicoCard.jsx", "JavaScript JSX", 0, 0, 0, 0, -29, 0, 0, 0, -3, -32
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\components\ui\Button.jsx", "JavaScript JSX", 0, 0, 0, 0, -11, 0, 0, 0, 0, -11
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\components\ui\ButtonLink.jsx", "JavaScript JSX", 0, 0, 0, 0, -10, 0, 0, 0, -2, -12
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\components\ui\Card.jsx", "JavaScript JSX", 0, 0, 0, 0, -12, 0, 0, 0, -3, -15
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\components\ui\ImageGallery.jsx", "JavaScript JSX", 0, 0, 0, 0, -18, 0, 0, 0, -1, -19
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\components\ui\Input.jsx", "JavaScript JSX", 0, 0, 0, 0, -9, 0, 0, 0, -2, -11
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\components\ui\Label.jsx", "JavaScript JSX", 0, 0, 0, 0, -9, 0, 0, 0, -2, -11
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\components\ui\Message.jsx", "JavaScript JSX", 0, 0, 0, 0, -7, 0, 0, 0, 0, -7
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\components\ui\StarRating.jsx", "JavaScript JSX", 0, 0, 0, 0, -30, 0, 0, -1, -4, -35
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\components\ui\Textarea.jsx", "JavaScript JSX", 0, 0, 0, 0, -9, 0, 0, 0, -1, -10
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\components\ui\index.js", "JavaScript", -9, 0, 0, 0, 0, 0, 0, 0, 0, -9
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\config.js", "JavaScript", -1, 0, 0, 0, 0, 0, 0, 0, 0, -1
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\context\AuthContext.jsx", "JavaScript JSX", 0, 0, 0, 0, -94, 0, 0, -3, -13, -110
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\context\ClienteContext.jsx", "JavaScript JSX", 0, 0, 0, 0, -75, 0, 0, 0, -10, -85
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\context\GarantiaContext.jsx", "JavaScript JSX", 0, 0, 0, 0, -70, 0, 0, 0, -10, -80
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\context\ReparacionContext.jsx", "JavaScript JSX", 0, 0, 0, 0, -104, 0, 0, 0, -11, -115
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\context\TaskContext.jsx", "JavaScript JSX", 0, 0, 0, 0, -85, 0, 0, -1, -11, -97
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\context\TecnicoContext.jsx", "JavaScript JSX", 0, 0, 0, 0, -69, 0, 0, 0, -9, -78
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\index.css", "CSS", 0, 0, 0, 0, 0, -16, 0, 0, -1, -17
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\main.jsx", "JavaScript JSX", 0, 0, 0, 0, -9, 0, 0, 0, -2, -11
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\pages\AdministradorPage.jsx", "JavaScript JSX", 0, 0, 0, 0, -20, 0, 0, 0, -6, -26
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\pages\ClienteCalificacion.jsx", "JavaScript JSX", 0, 0, 0, 0, -42, 0, 0, -1, -8, -51
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\pages\ClienteFormPage.jsx", "JavaScript JSX", 0, 0, 0, 0, -88, 0, 0, -1, -10, -99
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\pages\ClientehomePage.jsx", "JavaScript JSX", 0, 0, 0, 0, -18, 0, 0, 0, -6, -24
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\pages\ClientesPage.jsx", "JavaScript JSX", 0, 0, 0, 0, -106, 0, 0, -1, -12, -119
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\pages\GarantiaFormPage.jsx", "JavaScript JSX", 0, 0, 0, 0, -152, 0, 0, -1, -11, -164
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\pages\GarantiasPage.jsx", "JavaScript JSX", 0, 0, 0, 0, -114, 0, 0, 0, -13, -127
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\pages\HomePage.jsx", "JavaScript JSX", 0, 0, 0, 0, -87, 0, 0, 0, -16, -103
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\pages\LoginPage.jsx", "JavaScript JSX", 0, 0, 0, 0, -84, 0, 0, -1, -10, -95
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\pages\MyCalendar.jsx", "JavaScript JSX", 0, 0, 0, 0, -47, 0, 0, -18, -9, -74
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\pages\Pdf.jsx", "JavaScript JSX", 0, 0, 0, 0, -34, 0, 0, 0, -6, -40
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\pages\ProcessViewerPage.jsx", "JavaScript JSX", 0, 0, 0, 0, -23, 0, 0, 0, -6, -29
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\pages\ProfilePage.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 0, 0, 0, -1, -1
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\pages\RegisterPage.jsx", "JavaScript JSX", 0, 0, 0, 0, -139, 0, 0, 0, -14, -153
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\pages\ReparacionFormPage.jsx", "JavaScript JSX", 0, 0, 0, 0, -224, 0, 0, -4, -24, -252
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\pages\ReparacionesPage.jsx", "JavaScript JSX", 0, 0, 0, 0, -121, 0, 0, 0, -14, -135
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\pages\StartProcessPage.jsx", "JavaScript JSX", 0, 0, 0, 0, -25, 0, 0, 0, -6, -31
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\pages\TaskFormPage.jsx", "JavaScript JSX", 0, 0, 0, 0, -150, 0, 0, -1, -12, -163
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\pages\TasksPage.jsx", "JavaScript JSX", 0, 0, 0, 0, -124, 0, 0, -1, -15, -140
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\pages\TaskscamundaPage.jsx", "JavaScript JSX", 0, 0, 0, 0, -40, 0, 0, -2, -8, -50
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\pages\TecnicoFormPage.jsx", "JavaScript JSX", 0, 0, 0, 0, -91, 0, 0, -1, -8, -100
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\pages\TecnicohomePage.jsx", "JavaScript JSX", 0, 0, 0, 0, -20, 0, 0, 0, -6, -26
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\pages\TecnicosPage.jsx", "JavaScript JSX", 0, 0, 0, 0, -106, 0, 0, -1, -13, -120
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\schemas\auth.js", "JavaScript", -32, 0, 0, 0, 0, 0, 0, 0, -2, -34
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\schemas\cliente.js", "JavaScript", -12, 0, 0, 0, 0, 0, 0, 0, -1, -13
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\schemas\task.js", "JavaScript", -9, 0, 0, 0, 0, 0, 0, 0, -1, -10
+"c:\Users\INTEL\Desktop\Infobest\frontend\src\styles\styles.css", "CSS", 0, 0, 0, 0, 0, -114, 0, 0, -23, -137
+"c:\Users\INTEL\Desktop\Infobest\frontend\tailwind.config.js", "JavaScript", -7, 0, 0, 0, 0, 0, 0, -1, -2, -10
+"c:\Users\INTEL\Desktop\Infobest\frontend\vite.config.js", "JavaScript", -5, 0, 0, 0, 0, 0, 0, -1, -2, -8
+"Total", "-", 789, -3014, -5, -2, -3078, -167, -13, -26, -352, -5868

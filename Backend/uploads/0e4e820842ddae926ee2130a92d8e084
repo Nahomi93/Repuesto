@@ -1,0 +1,4 @@
+Nro_factura,equipo_comprado,nombre_cliente,apellido_cliente,nit_cliente,garantia,tiempo_garantia,fecha_inicio_garantia
+1001,Laptop,Juan,Perez,123456789,true,12 meses,2024-01-15
+1002,Tablet,Ana,Gomez,987654321,true,24 meses,2023-12-10
+1003,Smartphone,Carlos,Lopez,456789123,false,6 meses,2024-05-20

@@ -1,0 +1,125 @@
+Date : 2024-09-09 03:26:22
+Directory : c:\Users\INTEL\Desktop\Infobest\frontend
+Total : 76 files,  9824 codes, 47 comments, 479 blanks, all 10350 lines
+
+Languages
++----------------+------------+------------+------------+------------+------------+
+| language       | files      | code       | comment    | blank      | total      |
++----------------+------------+------------+------------+------------+------------+
+| JSON           |          2 |      6,364 |          0 |          2 |      6,366 |
+| JavaScript JSX |         49 |      3,078 |         44 |        383 |      3,505 |
+| JavaScript     |         18 |        195 |          3 |         58 |        256 |
+| CSS            |          3 |        167 |          0 |         31 |        198 |
+| HTML           |          1 |         13 |          0 |          1 |         14 |
+| Markdown       |          1 |          5 |          0 |          4 |          9 |
+| XML            |          2 |          2 |          0 |          0 |          2 |
++----------------+------------+------------+------------+------------+------------+
+
+Directories
++-----------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                    | files      | code       | comment    | blank      | total      |
++-----------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                       |         76 |      9,824 |         47 |        479 |     10,350 |
+| . (Files)                                                                               |          8 |      6,421 |          2 |         13 |      6,436 |
+| public                                                                                  |          1 |          1 |          0 |          0 |          1 |
+| src                                                                                     |         67 |      3,402 |         45 |        466 |      3,913 |
+| src (Files)                                                                             |          6 |        150 |          5 |         33 |        188 |
+| src\api                                                                                 |          9 |         93 |          1 |         48 |        142 |
+| src\assets                                                                              |          1 |          1 |          0 |          0 |          1 |
+| src\components                                                                          |         18 |        639 |          2 |         60 |        701 |
+| src\components (Files)                                                                  |          1 |        239 |          0 |         13 |        252 |
+| src\components\camunda                                                                  |          2 |         46 |          1 |         12 |         59 |
+| src\components\clientes                                                                 |          1 |         29 |          0 |          3 |         32 |
+| src\components\garantia                                                                 |          1 |         34 |          0 |          3 |         37 |
+| src\components\reparaciones                                                             |          1 |         72 |          0 |          5 |         77 |
+| src\components\tasks                                                                    |          1 |         66 |          0 |          6 |         72 |
+| src\components\tecnicos                                                                 |          1 |         29 |          0 |          3 |         32 |
+| src\components\ui                                                                       |         10 |        124 |          1 |         15 |        140 |
+| src\context                                                                             |          6 |        497 |          4 |         64 |        565 |
+| src\pages                                                                               |         23 |      1,855 |         33 |        234 |      2,122 |
+| src\schemas                                                                             |          3 |         53 |          0 |          4 |         57 |
+| src\styles                                                                              |          1 |        114 |          0 |         23 |        137 |
++-----------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-----------------------------------------------------------------------------------------+----------------+------------+------------+------------+------------+
+| filename                                                                                | language       | code       | comment    | blank      | total      |
++-----------------------------------------------------------------------------------------+----------------+------------+------------+------------+------------+
+| c:\Users\INTEL\Desktop\Infobest\frontend\.eslintrc.cjs                                  | JavaScript     |         21 |          0 |          1 |         22 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\README.md                                      | Markdown       |          5 |          0 |          4 |          9 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\index.html                                     | HTML           |         13 |          0 |          1 |         14 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\package-lock.json                              | JSON           |      6,320 |          0 |          1 |      6,321 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\package.json                                   | JSON           |         44 |          0 |          1 |         45 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\postcss.config.js                              | JavaScript     |          6 |          0 |          1 |          7 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\public\vite.svg                                | XML            |          1 |          0 |          0 |          1 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\App.css                                    | CSS            |         37 |          0 |          7 |         44 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\App.jsx                                    | JavaScript JSX |         79 |          3 |         21 |        103 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\ProtectedRoute.jsx                         | JavaScript JSX |          8 |          2 |          2 |         12 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\api\auth.js                                | JavaScript     |          4 |          0 |          3 |          7 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\api\axios.js                               | JavaScript     |          7 |          0 |          2 |          9 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\api\camunda.js                             | JavaScript     |          8 |          1 |          3 |         12 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\api\cliente.js                             | JavaScript     |          6 |          0 |          6 |         12 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\api\garantia.js                            | JavaScript     |          6 |          0 |          6 |         12 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\api\reparacion.js                          | JavaScript     |          8 |          0 |          9 |         17 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\api\taskcamunda.js                         | JavaScript     |         41 |          0 |          6 |         47 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\api\tasks.js                               | JavaScript     |          7 |          0 |          7 |         14 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\api\tecnico.js                             | JavaScript     |          6 |          0 |          6 |         12 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\assets\react.svg                           | XML            |          1 |          0 |          0 |          1 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\components\Navbar.jsx                      | JavaScript JSX |        239 |          0 |         13 |        252 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\components\camunda\ProcessDiagram.jsx      | JavaScript JSX |         22 |          0 |          6 |         28 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\components\camunda\StartProcessButton.jsx  | JavaScript JSX |         24 |          1 |          6 |         31 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\components\clientes\ClienteCard.jsx        | JavaScript JSX |         29 |          0 |          3 |         32 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\components\garantia\GarantiaCard.jsx       | JavaScript JSX |         34 |          0 |          3 |         37 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\components\reparaciones\ReparacionCard.jsx | JavaScript JSX |         72 |          0 |          5 |         77 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\components\tasks\TaskCard.jsx              | JavaScript JSX |         66 |          0 |          6 |         72 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\components\tecnicos\TecnicoCard.jsx        | JavaScript JSX |         29 |          0 |          3 |         32 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\components\ui\Button.jsx                   | JavaScript JSX |         11 |          0 |          0 |         11 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\components\ui\ButtonLink.jsx               | JavaScript JSX |         10 |          0 |          2 |         12 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\components\ui\Card.jsx                     | JavaScript JSX |         12 |          0 |          3 |         15 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\components\ui\ImageGallery.jsx             | JavaScript JSX |         18 |          0 |          1 |         19 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\components\ui\Input.jsx                    | JavaScript JSX |          9 |          0 |          2 |         11 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\components\ui\Label.jsx                    | JavaScript JSX |          9 |          0 |          2 |         11 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\components\ui\Message.jsx                  | JavaScript JSX |          7 |          0 |          0 |          7 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\components\ui\StarRating.jsx               | JavaScript JSX |         30 |          1 |          4 |         35 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\components\ui\Textarea.jsx                 | JavaScript JSX |          9 |          0 |          1 |         10 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\components\ui\index.js                     | JavaScript     |          9 |          0 |          0 |          9 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\config.js                                  | JavaScript     |          1 |          0 |          0 |          1 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\context\AuthContext.jsx                    | JavaScript JSX |         94 |          3 |         13 |        110 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\context\ClienteContext.jsx                 | JavaScript JSX |         75 |          0 |         10 |         85 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\context\GarantiaContext.jsx                | JavaScript JSX |         70 |          0 |         10 |         80 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\context\ReparacionContext.jsx              | JavaScript JSX |        104 |          0 |         11 |        115 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\context\TaskContext.jsx                    | JavaScript JSX |         85 |          1 |         11 |         97 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\context\TecnicoContext.jsx                 | JavaScript JSX |         69 |          0 |          9 |         78 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\index.css                                  | CSS            |         16 |          0 |          1 |         17 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\main.jsx                                   | JavaScript JSX |          9 |          0 |          2 |         11 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\pages\AdministradorPage.jsx                | JavaScript JSX |         20 |          0 |          6 |         26 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\pages\ClienteCalificacion.jsx              | JavaScript JSX |         42 |          1 |          8 |         51 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\pages\ClienteFormPage.jsx                  | JavaScript JSX |         88 |          1 |         10 |         99 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\pages\ClientehomePage.jsx                  | JavaScript JSX |         18 |          0 |          6 |         24 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\pages\ClientesPage.jsx                     | JavaScript JSX |        106 |          1 |         12 |        119 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\pages\GarantiaFormPage.jsx                 | JavaScript JSX |        152 |          1 |         11 |        164 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\pages\GarantiasPage.jsx                    | JavaScript JSX |        114 |          0 |         13 |        127 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\pages\HomePage.jsx                         | JavaScript JSX |         87 |          0 |         16 |        103 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\pages\LoginPage.jsx                        | JavaScript JSX |         84 |          1 |         10 |         95 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\pages\MyCalendar.jsx                       | JavaScript JSX |         47 |         18 |          9 |         74 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\pages\Pdf.jsx                              | JavaScript JSX |         34 |          0 |          6 |         40 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\pages\ProcessViewerPage.jsx                | JavaScript JSX |         23 |          0 |          6 |         29 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\pages\ProfilePage.jsx                      | JavaScript JSX |          0 |          0 |          1 |          1 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\pages\RegisterPage.jsx                     | JavaScript JSX |        139 |          0 |         14 |        153 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\pages\ReparacionFormPage.jsx               | JavaScript JSX |        224 |          4 |         24 |        252 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\pages\ReparacionesPage.jsx                 | JavaScript JSX |        121 |          0 |         14 |        135 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\pages\StartProcessPage.jsx                 | JavaScript JSX |         25 |          0 |          6 |         31 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\pages\TaskFormPage.jsx                     | JavaScript JSX |        150 |          1 |         12 |        163 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\pages\TasksPage.jsx                        | JavaScript JSX |        124 |          1 |         15 |        140 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\pages\TaskscamundaPage.jsx                 | JavaScript JSX |         40 |          2 |          8 |         50 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\pages\TecnicoFormPage.jsx                  | JavaScript JSX |         91 |          1 |          8 |        100 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\pages\TecnicohomePage.jsx                  | JavaScript JSX |         20 |          0 |          6 |         26 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\pages\TecnicosPage.jsx                     | JavaScript JSX |        106 |          1 |         13 |        120 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\schemas\auth.js                            | JavaScript     |         32 |          0 |          2 |         34 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\schemas\cliente.js                         | JavaScript     |         12 |          0 |          1 |         13 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\schemas\task.js                            | JavaScript     |          9 |          0 |          1 |         10 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\src\styles\styles.css                          | CSS            |        114 |          0 |         23 |        137 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\tailwind.config.js                             | JavaScript     |          7 |          1 |          2 |         10 |
+| c:\Users\INTEL\Desktop\Infobest\frontend\vite.config.js                                 | JavaScript     |          5 |          1 |          2 |          8 |
+| Total                                                                                   |                |      9,824 |         47 |        479 |     10,350 |
++-----------------------------------------------------------------------------------------+----------------+------------+------------+------------+------------+
