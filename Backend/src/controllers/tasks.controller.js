@@ -14,24 +14,23 @@ export const getTasks = async (req, res) => {
   }
 };
   
-export const createTask = async (req, res) => {
-  try {
-    const { title, tipo, description, date, garantia } = req.body;
-    const newTask = new Task({
-      title,
-      tipo,
-      description,
-      date,
-      cliente: req.user.id,
-      garantia,
-      hora,
-    });
-    await newTask.save();
-    res.json(newTask);
-  } catch (error) {
-    return res.status(500).json({ message: error.message });
-  }
-};
+  export const createTask = async (req, res) => {
+    try {
+      const { title, tipo, description, date, garantia } = req.body;
+      const newTask = new Task({
+        title,
+        tipo,
+        description,
+        date: new Date(date),
+        cliente: req.user.id,
+        garantia
+      });
+      await newTask.save();
+      res.json(newTask);
+    } catch (error) {
+      return res.status(500).json({ message: error.message });
+    }
+  };
 
   export const getTask = async (req, res) => {
     try {
@@ -63,7 +62,7 @@ export const createTask = async (req, res) => {
       const { title, tipo, description, date,garantia } = req.body;
       const taskUpdated = await Task.findOneAndUpdate(
         { _id: req.params.id },
-        { title, tipo, description, date,garantia,hora },
+        { title, tipo, description, date,garantia },
         { new: true }
       );
       return res.json(taskUpdated);

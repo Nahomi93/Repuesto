@@ -65,22 +65,32 @@ export function Navbar() {
                 <>
                   <li className="flex rounded-md p-2 cursor-pointer hover:bg-light-white text-style items-center gap-x-4 mt-2 nav-item relative">
                     <div className="flex items-center gap-x-4 cursor-pointer">
-                      <img src="./src/imagenes/reserva.png" alt="Clientes Icon" />
-                      <span className={`${!open && "hidden"} origin-left duration-200`}>Reservas</span>
+                      <img src="./src/imagenes/clientes.png" alt="Clientes Icon" />
+                      <span className={`${!open && "hidden"} origin-left duration-200`}>Clientes</span>
                     </div>
                     <ul className="dropdown-content">
                       <li className="flex rounded-md p-2 cursor-pointer hover:bg-light-white text-style items-center gap-x-4 mt-2 nav-item">
-                        <NavLink to="/add-task" className="flex items-center gap-x-4">
-                          <span>Añadir Reserva</span>
+                        <NavLink to="/add-cliente" className="flex items-center gap-x-4">
+                          <span>Añadir Clientes</span>
                         </NavLink>
                       </li>
                       <li className="flex rounded-md p-2 cursor-pointer hover:bg-light-white text-style items-center gap-x-4 mt-2 nav-item">
-                        <NavLink to="/tasks" className="flex items-center gap-x-4">
-                          <span>Ver Reserva</span>
+                        <NavLink to="/cliente" className="flex items-center gap-x-4">
+                          <span>Ver Clientes</span>
                         </NavLink>
                       </li>
                     </ul>
                   </li>
+                  
+                  <li className="flex rounded-md p-2 cursor-pointer hover:bg-light-white text-style items-center gap-x-4 mt-2 nav-item relative">
+                    <div className="flex items-center gap-x-4 cursor-pointer">
+                        <NavLink to="/tasks" className="flex items-center gap-x-4">
+                      <img src="./src/imagenes/reserva.png" alt="Cliente Icon" />
+                      <span className={`${!open && "hidden"} origin-left duration-200`}>Reservas</span>
+                    </NavLink>
+                    </div>
+                  </li>
+
                   <li className="flex rounded-md p-2 cursor-pointer hover:bg-light-white text-style items-center gap-x-4 mt-2 nav-item relative">
                     <div className="flex items-center gap-x-4 cursor-pointer">
                       <img src="./src/imagenes/garantias.png" alt="Garantía Icon" />
@@ -111,12 +121,22 @@ export function Navbar() {
                           <span>Añadir Reparación</span>
                         </NavLink>
                       </li>
+                      
                       <li className="flex rounded-md p-2 cursor-pointer hover:bg-light-white text-style items-center gap-x-4 mt-2 nav-item">
                         <NavLink to="/reparaciones" className="flex items-center gap-x-4">
-                          <span>Historial de Reparaciones</span>
+                          <span>Ver Reparaciones</span>
                         </NavLink>
                       </li>
                     </ul>
+                  </li>
+
+                  <li className="flex rounded-md p-2 cursor-pointer hover:bg-light-white text-style items-center gap-x-4 mt-2 nav-item relative">
+                    <div className="flex items-center gap-x-4 cursor-pointer">
+                        <NavLink to="/historial-reparaciones" className="flex items-center gap-x-4">
+                      <img src="./src/imagenes/reparacion.png" alt="Reparacion Icon" />
+                      <span className={`${!open && "hidden"} origin-left duration-200`}>Historal - Reportes</span>
+                    </NavLink>
+                    </div>
                   </li>
                 </>
               )}    

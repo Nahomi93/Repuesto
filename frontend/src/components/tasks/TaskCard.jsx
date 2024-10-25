@@ -1,5 +1,6 @@
 import dayjs from 'dayjs';
 import utc from 'dayjs/plugin/utc';
+import 'dayjs/locale/es';
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useTasks } from "../../context/TaskContext";
@@ -11,6 +12,7 @@ import Modal from "react-modal";
 import { FaSearch } from "react-icons/fa";
 
 dayjs.extend(utc);
+dayjs.locale('es');
 // Estilos para centrar el modal
 const modalStyles = {
   content: {
@@ -46,8 +48,8 @@ export function TaskCard({ task }) {
   };
 
   const formattedDate = task.date
-    ? dayjs.utc(task.date).local().format('dddd, MMMM D, YYYY')
-    : '';
+  ? dayjs.utc(task.date).local().format('dddd, D [de] MMMM [de] YYYY')
+  : '';
 
   const [isOpen, setIsOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
@@ -72,10 +74,17 @@ export function TaskCard({ task }) {
   };
   return (
     <tr key={task._id}>
+      {['Administrador', 'Tecnico'].includes(user.rol) && (
+        <> 
+        <td className="px-2 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{task.cliente.username}</td>
+        </>
+      )}
       <td className="px-2 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{task.title}</td>
       <td className="px-2 py-4 whitespace-nowrap text-sm text-gray-500">{task.tipo}</td>
       <td className="px-2 py-4 whitespace-nowrap text-sm text-gray-500">{task.description}</td>
       <td className="px-2 py-4 whitespace-nowrap text-sm text-gray-500">{formattedDate}</td>
+      <td className="px-2 py-4 whitespace-nowrap text-sm text-gray-500"></td>
+      
       <td className={`px-2 py-2 whitespace-nowrap text-sm font-medium text-center ${taskState === 'Aceptada' ? 'text-green-600' : taskState === 'Rechazada' ? 'text-red-600' : 'text-yellow-600'}`}>
         {taskState}
       </td>
@@ -98,6 +107,7 @@ export function TaskCard({ task }) {
         )}
         {['Administrador', 'Tecnico'].includes(user.rol) && (
           <>
+          
             {taskState !== 'Aceptada' && taskState !== 'Rechazada' && (
               <>
                 <Button onClick={() => handleStatusChange('Aceptada')}>Aceptar</Button>
@@ -105,8 +115,6 @@ export function TaskCard({ task }) {
               </>
             )}
             {task.garantia == true && (
-
-
               <Button onClick={() => handlegarantias()}>Ver garantias</Button>
             )}
             {/* Modal */}
@@ -130,7 +138,7 @@ export function TaskCard({ task }) {
               </div>
               {filteredGarantias.map((garantia) => (
                 <li key={garantia._id}>
-                  <h3>equipo: {garantia.nombre_cliente}</h3>
+                  <h3>Cliente: {garantia.nombre_cliente}</h3>
                   <p>equipo: {garantia.equipo_comprado}</p>
                   <p>Tiempo: {garantia.tiempo_garantia}</p>
                   <p>Apellido: {garantia.apellido_cliente}</p>

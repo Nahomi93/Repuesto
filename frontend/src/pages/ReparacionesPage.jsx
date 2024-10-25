@@ -7,7 +7,7 @@ import { useAuth } from "../context/AuthContext";
 const REPARACIONES_POR_PAGINA = 6;
 
 export function ReparacionesPage() {
-  const { reparaciones, getReparaciones, getReparacionesclientes } = useReparaciones();
+  const { reparaciones, getReparaciones, getReparacionesclientes , updateEstadoReparacion} = useReparaciones();
   const { user } = useAuth();
   
   const [searchTerm, setSearchTerm] = useState("");
@@ -79,26 +79,39 @@ export function ReparacionesPage() {
               <table className="min-w-full divide-y divide-gray-200 text-sm">
                 <thead className="bg-gray-50">
                   <tr>
-                    <th className="px-4 py-3 text-center text-xs text-gray-500 uppercase tracking-wider">Cliente</th>
+                  {['Administrador', 'Tecnico'].includes(user.rol) && (
+                    <th className="px-4 py-3 text-center text-xs text-gray-500 uppercase tracking-wider">
+                      Cliente
+                    </th>
+                  )}                    
+                    <th className="px-4 py-3 text-center text-xs text-gray-500 uppercase tracking-wider">Estado</th>
                     <th className="px-4 py-3 text-center text-xs text-gray-500 uppercase tracking-wider">Técnico</th>
-                    <th className="px-4 py-3 text-center text-xs text-gray-500 uppercase tracking-wider">Descripción Problema CLiente</th>
-                    <th className="px-4 py-3 text-center text-xs text-gray-500 uppercase tracking-wider">Problema Diagnosticado</th>
+                    {['Administrador', 'Tecnico'].includes(user.rol) && (
+                    <th className="px-4 py-3 text-center text-xs text-gray-500 uppercase tracking-wider">
+                      Descripción Problema Cliente
+                    </th>
+                  )}                    
+                     <th className="px-4 py-3 text-center text-xs text-gray-500 uppercase tracking-wider">Problema Diagnosticado</th>
                     <th className="px-4 py-3 text-center text-xs text-gray-500 uppercase tracking-wider">Fecha Devolución</th>
-                    <th className="px-4 py-3 text-center text-xs text-gray-500 uppercase tracking-wider">Fecha Recepción</th>
+                    {['Administrador', 'Tecnico'].includes(user.rol) && (
+                    <th className="px-4 py-3 text-center text-xs text-gray-500 uppercase tracking-wider">Fecha Recepción</th> 
+                  )}  
                     <th className="px-4 py-3 text-center text-xs text-gray-500 uppercase tracking-wider">Accesorios</th>
                     <th className="px-4 py-3 text-center text-xs text-gray-500 uppercase tracking-wider">Garantía</th>
                     <th className="px-4 py-3 text-center text-xs text-gray-500 uppercase tracking-wider">Costo Total</th>
                     <th className="px-4 py-3 text-center text-xs text-gray-500 uppercase tracking-wider">Costo Reparacion</th>
                     <th className="px-4 py-3 text-center text-xs text-gray-500 uppercase tracking-wider">Costo Adicional</th>
                     <th className="px-4 py-3 text-center text-xs text-gray-500 uppercase tracking-wider">Calificación</th>
-                    <th className="px-4 py-3 text-center text-xs text-gray-500 uppercase tracking-wider">Aceptación de Cambios</th>
+                    {['Administrador', 'Tecnico'].includes(user.rol) && (
+                    <th className="px-4 py-3 text-center text-xs text-gray-500 uppercase tracking-wider">Aceptación de Cambios</th> 
+                  )}  
                     <th className="px-4 py-3 text-center text-xs text-gray-500 uppercase tracking-wider">Fotos</th>
                     <th className="px-4 py-3 text-center text-xs text-gray-500 uppercase tracking-wider">Acciones</th>
                   </tr>
                 </thead>
                 <tbody className="bg-white divide-y divide-gray-200">
                   {reparacionesEnPaginaActual.map(reparacion => (
-                    <ReparacionCard key={reparacion._id} reparacion={reparacion} />
+                    <ReparacionCard key={reparacion._id} reparacion={reparacion} updateEstado={updateEstadoReparacion} estadoFormulario={true} />
                   ))}
                 </tbody>
               </table>

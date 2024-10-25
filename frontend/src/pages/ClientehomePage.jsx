@@ -30,6 +30,7 @@ export function ClientehomePage() {
   };
   const [notificacionReservaMostrada, setNotificacionReservaMostrada] = useState(false);
   const [notificacionCambiosMostrada, setNotificacionCambiosMostrada] = useState(false);
+  const [notificacionDevolucionMostrada, setNotificacionDevolucionMostrada] = useState(false);
 
 
   useEffect(() => {
@@ -75,6 +76,24 @@ export function ClientehomePage() {
 
 
   useEffect(() => {
+    const fechaActual = new Date();
+    const tresDiasEnMilisegundos = 3 * 24 * 60 * 60 * 1000;
+
+    const hayDevolucionProxima = reparaciones.some(reparacion => {
+      if (!reparacion.fecha_devolucion) return false;
+      const fechaDevolucion = new Date(reparacion.fecha_devolucion);
+      return (
+        fechaDevolucion - fechaActual <= tresDiasEnMilisegundos &&
+        fechaDevolucion - fechaActual > 0 // Asegúrate de que no sea una fecha pasada
+      );
+    });
+
+    if (hayDevolucionProxima && !notificacionDevolucionMostrada) {
+      setNotificacionDevolucionMostrada(true);
+    }
+  }, [reparaciones, notificacionDevolucionMostrada]);
+
+  useEffect(() => {
     const interval = setInterval(nextImage, 3000);
     return () => clearInterval(interval);
 
@@ -93,6 +112,10 @@ export function ClientehomePage() {
           right: '20px', // Ajusta la posición horizontal
         }}
       >
+        {notificacionDevolucionMostrada && (
+          <BasicNotifiacion> La fecha de devolución de su equipo está próxima.</BasicNotifiacion>
+        )}
+
         {/* Muestra la notificación de reserva si no ha sido mostrada */}
         {notificacionReservaMostrada && (
           <BasicNotifiacion >Se aceptó una reserva</BasicNotifiacion>

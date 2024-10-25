@@ -29,12 +29,8 @@ const taskSchema = new mongoose.Schema(
         enum: ['Pendiente', 'Aceptada', 'Rechazada'],
         default: 'Pendiente'
       },
-      garantia: {
+      garantia: {   //garantia cliente para que aparezca el boton 
         type: Boolean,
-        required: true,
-      },
-      hora: {
-        type: String, 
         required: true,
       },
     },

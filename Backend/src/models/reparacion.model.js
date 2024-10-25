@@ -12,6 +12,12 @@ const reparacionSchema = new mongoose.Schema(
         ref: "User",
         required: true
       },
+      estado: {
+        type: String,
+        enum: ["Recibido", "En Reparación", "Entregado"],
+        default: "Recibido",
+        required: true,
+      },
       fecha_recepcion: {
         type: Date,
         default: Date.now,

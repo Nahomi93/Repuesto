@@ -6,7 +6,7 @@ export const createTaskSchema = z.object({
   }),
   tipo: z.string().optional(),
   description: z.string().optional(),
-  date: z.string().datetime().optional(),
+  date: z.string().datetime({ offset: true }),
 });
 
 export const updateTaskStatusSchema = z.object({

@@ -25,8 +25,11 @@ export function TaskProvider({ children }) {
   const getTasks = async () => { 
     try {
         const res = await getTasksRequest();
-        setTasks(res.data);
-        console.log (res.data);
+        const sortedTasks = res.data.sort(
+          (a, b) => new Date(b.updatedAt) - new Date(a.updatedAt)
+        );
+        console.log("__________________-------------", sortedTasks);
+        setTasks(sortedTasks);
     } catch (error) {
         console.error(error.message);
     }  
@@ -53,8 +56,11 @@ export function TaskProvider({ children }) {
   const getTask = async (id) => {
     try {
       const res = await getTaskRequest(id);
-      console.log (res.data);
-      setTasks(res.data);
+      const sortedTasks = res.data.sort(
+        (a, b) => new Date(b.updatedAt) - new Date(a.updatedAt)
+      );
+      console.log("__________________-------------", sortedTasks);
+      setTasks(sortedTasks);
 
       //return res.data;
     } catch (error) {

@@ -6,7 +6,9 @@ import {
   getReparacionRequest,
   updateReparacionRequest,
   calificacionReparacionRequest,
-  getReparacionesclientesRequest
+  getReparacionesclientesRequest,
+  updateEstadoReparacionRequest,
+  downloadReporteReparacionesRequest,
 } from "../api/reparacion";
 import axios from 'axios'; // Asegúrate de importar axios
 
@@ -16,6 +18,22 @@ export const useReparaciones = () => {
   const context = useContext(ReparacionContext);
   if (!context) throw new Error("useReparaciones must be used within a ReparacionProvider");
   return context;
+};
+
+const descargarReporte = async () => {
+  try {
+    const response = await downloadReporteReparacionesRequest();
+    const blob = new Blob([response.data], { type: "application/pdf" });
+    const url = window.URL.createObjectURL(blob);
+
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "reporte_reparaciones.pdf";
+    a.click();
+    window.URL.revokeObjectURL(url);
+  } catch (error) {
+    console.error("Error al descargar el reporte:", error);
+  }
 };
 
 export function ReparacionProvider({ children }) {
@@ -75,6 +93,17 @@ export function ReparacionProvider({ children }) {
     }
   };
 
+  const updateEstadoReparacion = async (id, estado) => {
+    try {
+      await updateEstadoReparacionRequest(id, estado);
+      setReparaciones((prev) =>
+        prev.map((rep) => (rep._id === id ? { ...rep, estado } : rep))
+      );
+    } catch (error) {
+      console.error("Error al actualizar el estado:", error);
+    }
+  };
+
   const calificarReparacion = async (id, reparacion) => {
     try {
       await calificacionReparacionRequest(id, reparacion);
@@ -104,9 +133,11 @@ export function ReparacionProvider({ children }) {
         createReparacion,
         getReparacion,
         updateReparacion,
+        updateEstadoReparacion,
         calificarReparacion,
         getReparacionesclientes,
-        deleteReparacionFoto
+        deleteReparacionFoto,
+        descargarReporte,
       }}
     >
       {children}

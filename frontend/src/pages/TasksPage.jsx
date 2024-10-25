@@ -17,6 +17,7 @@ export function TasksPage() {
   useEffect(() => {
     if (user.rol === 'Administrador' || user.rol === 'Tecnico') {
       getTasks();
+      
     } else {
       getTask(user.id);
     }
@@ -32,7 +33,7 @@ export function TasksPage() {
           confirmButtonText: 'Ok'
         });
       }
-    }, 10000); // 10 segundos
+    }, 1200000 ); // 10 segundos
 
     return () => clearInterval(alertInterval);
   }, [tasks]);
@@ -93,10 +94,16 @@ export function TasksPage() {
               <table className="min-w-full divide-y divide-gray-200 text-sm">
                 <thead className="bg-gray-50">
                   <tr>
-                    <th className="px-4 py-3 text-center text-xs text-gray-500 uppercase tracking-wider">Título</th>
+                  {['Administrador', 'Tecnico'].includes(user.rol) && (     
+                    <>
+                    <th className="px-4 py-3 text-center text-xs text-gray-500 uppercase tracking-wider">Cliente</th>
+                    </>
+                    )}
+                    <th className="px-4 py-3 text-center text-xs text-gray-500 uppercase tracking-wider">Equipo</th>
                     <th className="px-4 py-3 text-center text-xs text-gray-500 uppercase tracking-wider">Tipo</th>
                     <th className="px-4 py-3 text-center text-xs text-gray-500 uppercase tracking-wider">Descripción</th>
                     <th className="px-4 py-3 text-center text-xs text-gray-500 uppercase tracking-wider">Fecha</th>
+                    <th className="px-4 py-3 text-center text-xs text-gray-500 uppercase tracking-wider">Garantía</th>
                     <th className="px-4 py-3 text-center text-xs text-gray-500 uppercase tracking-wider">Estado</th>
                     <th className="px-4 py-3 text-center text-xs text-gray-500 uppercase tracking-wider">Acciones</th>
                   </tr>

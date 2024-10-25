@@ -49,4 +49,5 @@ export const createReparacionSchema = z.object({
     }
   }),
   finalizado: z.string().optional().transform((val) => val === 'true'),
+  estado: z.enum(["Recibido", "En Reparación", "Entregado"]).optional(),
 });

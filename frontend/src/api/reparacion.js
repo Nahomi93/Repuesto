@@ -14,3 +14,10 @@ export const deleteReparacionRequest = async (id) => axios.delete(`/reparaciones
 
 export const getReparacionRequest = async (id) => axios.get(`/reparaciones/${id}`);
 
+export const updateEstadoReparacionRequest = async (id, estado) => axios.put(`/reparaciones/${id}/estado`, { estado });
+
+export const downloadReporteReparacionesRequest = async () => {
+    return axios.get("/reparaciones/reporte", {
+      responseType: "blob", // Necesario para manejar el archivo como un blob
+    });
+  };

@@ -2,6 +2,7 @@ import Reparacion from "../models/reparacion.model.js";
 import multer from 'multer';
 import path from 'path';
 import fs from 'fs';
+import PDFDocument from 'pdfkit'; // Importar 
 const storage = multer.diskStorage({
   filename: (req, file, cb) => {
       cb(null, file.originalname);
@@ -30,7 +31,7 @@ const storage = multer.diskStorage({
       console.log(req.params.id);
       const reparaciones = await Reparacion.find({cliente: req.params.id })
       .populate('cliente', 'username')  // 'nombre' es un campo en el documento 'Cliente'
-      .populate('tecnico', 'nombre'); // 'nombre' es un campo en el documento 'Tecnico';
+      .populate('tecnico', 'username'); // 'nombre' es un campo en el documento 'Tecnico';
       console.log(reparaciones);
       res.json(reparaciones);
     } catch (error) {
@@ -106,9 +107,18 @@ const storage = multer.diskStorage({
       }
 
       const { cliente, tecnico, fecha_devolucion, fecha_recepcion, accesorios_dejados, 
-        description_problema, garantia, problemaDiagnosticado,costo, aceptacion_cambios,cotizacion,finalizado } = req.body;
-
-      const reparacionUpdated = await Reparacion.findByIdAndUpdate(
+        description_problema, garantia, problemaDiagnosticado,costo, aceptacion_cambios,cotizacion, rol, finalizado } = req.body;
+      let reparacionUpdated;
+      if(rol === 'Cliente'){
+        reparacionUpdated = await Reparacion.findByIdAndUpdate(
+          req.params.id,
+          {
+            cotizacion: JSON.parse(cotizacion)
+          },
+          { new: true }
+        );
+      }
+      reparacionUpdated = await Reparacion.findByIdAndUpdate(
         req.params.id,
         {
           cliente,
@@ -183,5 +193,71 @@ const storage = multer.diskStorage({
       return res.json(reparacionUpdated);
     } catch (error) {
       return res.status(500).json({ message: error.message });
+    }
+  };
+
+  export const actualizarEstadoReparacion = async (req, res) => {
+    try {
+      const { estado } = req.body; // Recibimos el nuevo estado desde el frontend
+  
+      if (!["Recibido", "En Reparación", "Entregado"].includes(estado)) {
+        return res.status(400).json({ message: "Estado no válido" });
+      }
+  
+      const reparacionUpdated = await Reparacion.findByIdAndUpdate(
+        req.params.id,
+        {
+          estado,
+          ...(estado === "Entregado" && { fecha_devolucion: new Date() }) // Si es entregado, registrar la fecha
+        },
+        { new: true }
+      );
+  
+      if (!reparacionUpdated) {
+        return res.status(404).json({ message: "Reparación no encontrada" });
+      }
+  
+      res.json(reparacionUpdated);
+    } catch (error) {
+      console.log(error);
+      return res.status(500).json({ message: error.message });
+    }
+  };
+
+  export const generarReportePDF = async (req, res) => {
+    try {
+      const reparaciones = await Reparacion.find()
+        .populate('cliente', 'username')
+        .populate('tecnico', 'nombre');
+  
+      const doc = new PDFDocument({ size: 'A4', layout: 'portrait', margin: 50 });
+  
+      // Configurar los encabezados para la descarga del PDF
+      res.setHeader('Content-Disposition', 'attachment; filename=reporte_reparaciones.pdf');
+      res.setHeader('Content-Type', 'application/pdf');
+  
+      doc.pipe(res);
+  
+      // Encabezado del reporte
+      doc.fontSize(18).text('Reporte de Reparaciones', { align: 'center' });
+      doc.moveDown();
+  
+      // Iterar sobre las reparaciones y agregar los datos al PDF
+      reparaciones.forEach((reparacion, index) => {
+        doc.fontSize(12).text(`Reparación #${index + 1}`, { underline: true });
+        doc.text(`Cliente: ${reparacion.cliente.username}`);
+        doc.text(`Técnico: ${reparacion.tecnico.nombre}`);
+        doc.text(`Fecha de Recepción: ${reparacion.fecha_recepcion}`);
+        doc.text(`Fecha de Devolución: ${reparacion.fecha_devolucion || 'No entregado'}`);
+        doc.text(`Costo: ${reparacion.costo} Bs`);
+        doc.text(`Descripción del Problema: ${reparacion.description_problema}`);
+        doc.text(`Estado: ${reparacion.finalizado ? 'Finalizado' : 'Pendiente'}`);
+        doc.moveDown(2);
+      });
+  
+      doc.end();
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ message: error.message });
     }
   };

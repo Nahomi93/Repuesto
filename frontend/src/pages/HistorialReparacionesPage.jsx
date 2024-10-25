@@ -1,33 +1,39 @@
 import { useEffect, useState } from "react";
 import { useReparaciones } from "../context/ReparacionContext";
 import { ReparacionCard } from "../components/reparaciones/ReparacionCard";
-import { FaSearch } from "react-icons/fa";
+import { FaSearch, FaDownload } from "react-icons/fa";
+import { downloadReporteReparacionesRequest } from "../api/reparacion"; // Importa la función
+import { reportePDF } from "../components/reportePDF";
+import { useAuth } from "../context/AuthContext";
+import { reporteCalificacion } from "../components/reporteCalificacion";
 
 const REPARACIONES_POR_PAGINA = 6;
 
 export function HistorialReparacionesPage() {
-  const { reparaciones, getReparaciones } = useReparaciones();
+  const { reparaciones, getReparaciones, descargarReporte  } = useReparaciones();
   const [searchTerm, setSearchTerm] = useState("");
   const [paginaActual, setPaginaActual] = useState(1);
   const [reparacionesFinalizadas, setReparacionesFinalizadas] = useState([]);
-
+  const { user } = useAuth();
   useEffect(() => {
-    getReparaciones(); // Obtener todas las reparaciones
+    getReparaciones();
   }, []);
 
   useEffect(() => {
     const finalizadas = reparaciones.filter((reparacion) => reparacion.finalizado === true);
     setReparacionesFinalizadas(finalizadas);
+    console.log (reparacionesFinalizadas);
   }, [reparaciones]);
 
   const handleSearch = (e) => {
     setSearchTerm(e.target.value.toLowerCase());
-    setPaginaActual(1); // Resetear la página actual al buscar
+    setPaginaActual(1);
   };
+
 
   const filteredReparaciones = reparacionesFinalizadas.filter(reparacion =>
     reparacion.cliente.username.toLowerCase().includes(searchTerm) ||
-    reparacion.tecnico.username.toLowerCase().includes(searchTerm)
+    reparacion.tecnico.nombre.toLowerCase().includes(searchTerm)
   );
 
   const indexOfLastReparacion = paginaActual * REPARACIONES_POR_PAGINA;
@@ -35,10 +41,31 @@ export function HistorialReparacionesPage() {
   const reparacionesEnPaginaActual = filteredReparaciones.slice(indexOfFirstReparacion, indexOfLastReparacion);
 
   const totalPaginas = Math.ceil(filteredReparaciones.length / REPARACIONES_POR_PAGINA);
+  const btnReporte = () => {
+    reportePDF(reparacionesFinalizadas, user.username);
+  };
+
+  const btnReporteCalificaciones = () => {
+    reporteCalificacion(reparacionesFinalizadas, user.username);
+  };
 
   return (
     <div className="flex flex-col items-center py-10">
       <h1 className="font-bold text-2xl text-center mb-6">Historial de Reparaciones</h1>
+
+      <button
+        onClick={()=> btnReporte()}
+        className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors mb-6"
+      >
+        <FaDownload className="inline-block mr-2" /> Descargar Reporte del historial
+      </button>
+
+      <button
+        onClick={()=> btnReporteCalificaciones()}
+        className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors mb-6"
+      >
+        <FaDownload className="inline-block mr-2" /> Descargar Reporte de calificaciones
+      </button>
 
       <div className="relative w-72 max-w-4xl mb-6">
         <div className="absolute mt-3 ml-2">
@@ -65,24 +92,25 @@ export function HistorialReparacionesPage() {
                 <thead className="bg-gray-50">
                   <tr>
                     <th className="px-4 py-3 text-center text-xs text-gray-500 uppercase tracking-wider">Cliente</th>
+                    <th className="px-4 py-3 text-center text-xs text-gray-500 uppercase tracking-wider">Estado</th>
                     <th className="px-4 py-3 text-center text-xs text-gray-500 uppercase tracking-wider">Técnico</th>
-                    <th className="px-4 py-3 text-center text-xs text-gray-500 uppercase tracking-wider">Descripción Problema CLiente</th>
+                    <th className="px-4 py-3 text-center text-xs text-gray-500 uppercase tracking-wider">Descripción problema Cliente</th>
+                    <th className="px-4 py-3 text-center text-xs text-gray-500 uppercase tracking-wider">Problema Diagnosticado</th>
                     <th className="px-4 py-3 text-center text-xs text-gray-500 uppercase tracking-wider">Fecha Devolución</th>
                     <th className="px-4 py-3 text-center text-xs text-gray-500 uppercase tracking-wider">Fecha Recepción</th>
                     <th className="px-4 py-3 text-center text-xs text-gray-500 uppercase tracking-wider">Accesorios</th>
                     <th className="px-4 py-3 text-center text-xs text-gray-500 uppercase tracking-wider">Garantía</th>
                     <th className="px-4 py-3 text-center text-xs text-gray-500 uppercase tracking-wider">Costo Total</th>
-                    <th className="px-4 py-3 text-center text-xs text-gray-500 uppercase tracking-wider">Costo Reparación</th>
+                    <th className="px-4 py-3 text-center text-xs text-gray-500 uppercase tracking-wider">Costo Reparacion</th>
                     <th className="px-4 py-3 text-center text-xs text-gray-500 uppercase tracking-wider">Costo Adicional</th>
                     <th className="px-4 py-3 text-center text-xs text-gray-500 uppercase tracking-wider">Calificación</th>
-                    <th className="px-4 py-3 text-center text-xs text-gray-500 uppercase tracking-wider">Aceptación de Cambios</th>
                     <th className="px-4 py-3 text-center text-xs text-gray-500 uppercase tracking-wider">Fotos</th>
-                    <th className="px-4 py-3 text-center text-xs text-gray-500 uppercase tracking-wider">Acciones</th>
+                    <th className="px-4 py-3 text-center text-xs text-gray-500 uppercase tracking-wider">Reportes</th>
                   </tr>
                 </thead>
                 <tbody className="bg-white divide-y divide-gray-200">
                   {reparacionesEnPaginaActual.map(reparacion => (
-                    <ReparacionCard key={reparacion._id} reparacion={reparacion} />
+                    <ReparacionCard key={reparacion._id} reparacion={reparacion} estadoFormulario={false}/>
                   ))}
                 </tbody>
               </table>
@@ -121,3 +149,5 @@ export function HistorialReparacionesPage() {
     </div>
   );
 }
+
+export default HistorialReparacionesPage;
